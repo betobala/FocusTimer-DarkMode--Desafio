@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --primary-color: rgba(50, 50, 56, 1);
+  --btn-bg-color: #E1E1E6;
+  --btn-color-fire: rgb(163, 46, 46);
+  --btn-color-rain: rgb(2, 121, 157);
+  --btn-color-forest: rgb(15, 157, 2);
+  --btn-color-coffee: rgb(157, 90, 2);
+
+  
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+
+  display: flex;
+  place-items: center;
+  gap: clamp(10rem, 10rem + 5vw, 19.2rem);
+  min-height: 100vh;
+
+  margin: 0 auto 0 23vw;
+  transition: background .5s;
+  
+}
+
+button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+.card {
+  display: grid;
+  justify-content: center;
+  gap: 4.8rem;
+
+}
+
+#timer {
+  font-size: clamp(7rem, 7.5rem + 2vw, 12.6rem);
+  line-height: 14.8rem;
+  text-align: center;
+}
+
+#controls {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+}
+
+#controls button {
+  transition: transform .2s;
+}
+
+#controls button svg path {
+  transition: all .5s;
+}
+
+#controls button:active {
+  transform: scale(1.1);
+}
+
+#themes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+  max-width: 33.6rem;
+  margin-right: 5vw;
+}
+
+#themes button {
+  padding: 4.8rem;
+  padding-top: 2.4rem;
+  padding-bottom: 7.2rem;
+  background-color: var(--btn-bg-color);
+
+  border-radius: 24px;
+  min-width: 15rem;
+
+  transition: background .5s;
+}
+.body span {
+  transition: color .5s;
+}
+
+#forest .on {
+  background-color: var(--btn-color-forest);
+}
+#fire .on {
+  background-color: var(--btn-color-fire);
+}
+#rain .on {
+  background-color: var(--btn-color-rain);
+}
+#coffee .on {
+  background-color: var(--btn-color-coffee);
+}
+#themes .on svg path {
+  fill: white;
+}
+
+#themes button svg path {
+  transition: fill .5s;
+}
+
+#forest { 
+  position: relative;
+}
+
+#fire { 
+  position: relative;
+}
+
+#rain { 
+  position: relative;
+}
+
+#coffee { 
+  position: relative;
+}
+
+.slidecontainer {
+  width: 72%;
+  position: absolute;
+  bottom: 28px;
+  right: 10px;
+ 
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 5px;
+  border-radius: 5px;  
+  background: #000000;
+  outline: none;
+  opacity: 1;
+  -webkit-transition: .3;
+  transition: background .5s;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%; 
+  background: #000000;
+  cursor: pointer;
+  transition: background .5s;
+}
+.active {
+  background: #ffffff;
+}
+.active::-webkit-slider-thumb {
+  background: #ffffff;
+}
+
+footer button{
+  position: absolute;
+  right: 6rem;
+  top: 6rem;
+}
+
+.hide {
+  display: none;
+}
+
+#forest .dkMode {
+  background-color: #29292E;
+}
+#fire .dkMode {
+  background-color: #29292E;
+}
+#coffee .dkMode {
+  background-color: #29292E;
+}
+#rain .dkMode {
+  background-color: #29292E;
+}
+
+.dkModeBg {
+  background-color: #121214;
+}
+
+.dkModeSlider {
+  background: #C4C4CC;
+}
+.dkModeSlider::-webkit-slider-thumb {
+  background: #C4C4CC;
+}
+
+.dkModeSvgColor svg path {
+  fill: #C4C4CC;
+}
+.dkModeDisplay {
+  color: #ffffff;
+}
